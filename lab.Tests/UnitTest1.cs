@@ -2,6 +2,7 @@ using part1;
 using part2;
 using ItemClassLibrary;
 using MyCollectionLibrary;
+using AdditionalPart;
 using System.Xml;
 
 namespace lab.Tests

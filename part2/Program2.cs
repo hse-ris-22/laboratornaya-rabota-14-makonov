@@ -104,33 +104,5 @@ public class Program2
         Console.WriteLine("\nЗапрос 5: все продукты рынка и их количество");
         Console.ResetColor();
         LinqRequest.PrintAllProductsWithAmounts(market);
-
-        //методы расширения для хеш-таблицы
-        Console.ReadKey();
-        market.Display();
-        Console.ForegroundColor = ConsoleColor.Red;
-        Console.WriteLine("\n\nМетоды расширения для хеш-таблицы");
-        Console.WriteLine("\n Поиск товара по заданному условию (по цене > 2000)");
-        Console.ResetColor();
-        Item[] res1 = market.FindItems(item => item.Price > 2000);
-        foreach(Item item in res1)
-        {
-            Console.WriteLine(item);
-        }
-
-        Console.ForegroundColor = ConsoleColor.Red;
-        Console.WriteLine("\n Суммирование цен определенных товаров (игрушек)");
-        Console.ResetColor();
-        int res2 = market.SumItemPrices(item => item is Toy);
-        Console.WriteLine(res2);
-
-        Console.ForegroundColor = ConsoleColor.Red;
-        Console.WriteLine("\nСортировка товаров по заданному параметру (по имени)");
-        Console.ResetColor();
-        Item[] res3 = market.OrderItems(item => item.Name);
-        foreach(Item item in res3)
-        {
-            Console.WriteLine(item);
-        }
     }
 }

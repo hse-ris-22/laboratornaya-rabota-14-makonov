@@ -40,7 +40,7 @@ namespace part1
             return itemDictionary;
         }
 
-        [ExcludeFromCodeCoverage] // просто создает коллекцию 
+        [ExcludeFromCodeCoverage] // создает очередь из словарей 
         public static Queue<Dictionary<int, Item>> CreateQueue(int length)
         {
             Queue<Dictionary<int, Item>> queue = new Queue<Dictionary<int, Item>>(length);
@@ -90,12 +90,12 @@ namespace part1
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Запрос 4: товары, которые есть в каждом отделе");
             Console.ResetColor();
-            Request.PrintItemIntersection(market); // 4 запрос
+            Request.PrintItemIntersection(market);
 
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("\nЗапрос 5: все продукты рынка и их количество");
             Console.ResetColor();
-            Request.PrintAllProductsWithAmounts(market); // 5 запрос
+            Request.PrintAllProductsWithAmounts(market); 
 
             Console.ReadKey();
             //запросы, реализованные с помощью linq запросов
@@ -121,12 +121,12 @@ namespace part1
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Запрос 4: товары, которые есть в каждом отделе");
             Console.ResetColor();
-            LinqRequest.PrintItemIntersection(market); // 4 запрос
+            LinqRequest.PrintItemIntersection(market); 
 
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("\nЗапрос 5: все продукты рынка и их количество");
             Console.ResetColor();
-            LinqRequest.PrintAllProductsWithAmounts(market); // 5 запрос
+            LinqRequest.PrintAllProductsWithAmounts(market); 
         }
     }
 }
